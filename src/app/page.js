@@ -121,7 +121,7 @@ const page = ({ params }) => {
     myfetch();
   }, []);
   const myfetch = async () => {
-    const res = await fetch(`http://localhost:3000/api/gettoken`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/gettoken`, {
       credentials: "include",
       mode: "no-cors",
       method: "POST",
@@ -137,9 +137,6 @@ const page = ({ params }) => {
       
       let substr = '<link rel="canonical" href="//taazatime.com/" />';
       let newStr = str.replace(new RegExp(substr, "g"), "");
-      substr =
-        '<meta name="google-adsense-account" content="ca-pub-8683978034260199" />';
-      newStr = newStr.replace(new RegExp(substr, "g"), "");
       substr ='<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","legalName":"TaazaTime.com","url":"https://taazatime.com/"}</script>';
       newStr = newStr.replace(new RegExp(substr, "g"), "");
       substr ='<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","legalName":"TaazaTime.com","url":"https://taazatime.com/"}</script>';

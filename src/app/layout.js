@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
     "@context": "https://schema.org/",
     "@type": "Website",
     name: "SaveIG",
-    url: "https://saveig51.vercel.app/",
+    url: `${process.env.NEXT_PUBLIC_HOST}`,
   };
   return (
     <html lang="en">

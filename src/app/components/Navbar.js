@@ -12,7 +12,7 @@ const Navbar = () => {
     
 <nav className=" border-gray-200 bg-gray-900 ">
   <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <a href="https://insta-saver.vercel.app" className="flex items-center space-x-3 rtl:space-x-reverse">
+    <a href={`${process.env.NEXT_PUBLIC_HOST}`} className="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="/logoinside.jpg" className="h-12" alt="instasaver Logo" />
         <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">Bharat News</span>
     </a>
